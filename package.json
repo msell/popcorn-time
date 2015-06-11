@@ -14,7 +14,6 @@
   "dependencies": {
     "chalk": "^1.0.0",
     "dammit": "^0.5.1",
-    "fluent-ffmpeg": "^2.0.1",
     "yargs": "^3.10.0"
   }
 }
