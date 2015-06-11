@@ -19,12 +19,15 @@ if (!fs.existsSync(source)) {
 filteredFiles(source, convert);
 
 function convert(files) {
-  child_process.exec('ffmpeg -i ' + files[0] + ' -c:v copy -c:a libfaac -ac 6 -ar 48000 -ab 448k /Users/matt/Downloads/temp.mp4', function (err, stdout, stderr) {
-    if (err) throw err;
 
-    console.log(stdout);
-
-  });
+for(var i=0;i<files.length;i++){
+  console.log('ffmpeg -i ' + files[i].sourceFile + ' -c:v copy -c:a libfaac -ac 6 -ar 48000 -ab 448k ' + files[i].destinationFile);
+}
+//  child_process.exec('ffmpeg -i ' + files[0].sourceFile + ' -c:v copy -c:a libfaac -ac 6 -ar 48000 -ab 448k ' + files[0].destinationFile,
+     //    function (err, stdout, stderr) {
+     //      if (err) throw err;
+     //
+     //    });
 }
 
 function goodbye(reason) {
