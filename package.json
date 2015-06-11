@@ -2,13 +2,17 @@
   "name": "ffmpeg-converter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
+  "preferGlobal": true,
+  "bin": {
+    "popcorn-time": "index.js"
+  },
   "dependencies": {
+    "chalk": "^1.0.0",
     "dammit": "^0.5.1",
     "fluent-ffmpeg": "^2.0.1",
     "yargs": "^3.10.0"
